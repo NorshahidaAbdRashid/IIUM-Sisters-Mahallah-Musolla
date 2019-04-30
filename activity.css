@@ -1,0 +1,113 @@
+/*This file written by Maisyarah Binti Bohari
+     Matric Number : 1814624 */
+.main-content {
+  min-width: 778px;
+}
+.main-content img {
+  width:100%;
+}
+.mahallah-category {
+  text-align: center;
+  color:#00918e;
+}
+#page2 {
+  float:right;
+  text-align: center;
+  margin-left: 90px;
+  margin-top: 300px;
+  background-color: #ddd;
+  padding:20px;
+  border-radius: 15px;
+  text-align: center;
+}
+#page2 > h2{
+  margin:auto;
+  margin-bottom: 10px;
+}
+#page2 > table{
+  border-collapse: collapse;
+}
+#page2  td{
+  padding: 5px;
+}
+/*style for show the day today*/
+.dayNow{
+    background-color: #00918e;
+    border-radius: 50%;
+    color: #fff;
+    text-align: center;
+}
+/* Float four columns side by side */
+.column {
+  float: left;
+  width: 260px;
+  padding: 0 10px;
+}
+/* Remove extra left and right margins, due to padding */
+.row {
+  margin: 0 -5px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+/* Popup container - can be anything you want */
+.popup {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* The actual popup */
+.popup .popuptext {
+  visibility: hidden;
+  width: auto;
+  background-color: #00918e;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 9px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -80px;
+}
+/* Popup arrow */
+.popup .popuptext::after {
+  content: "";
+  position: fixed;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+/* Toggle this class - hide and show the popup */
+.popup .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}

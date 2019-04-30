@@ -1,0 +1,354 @@
+<!-- Written by Norshahida binti Abd Rashid (1711342)-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Homepage - IIUM SMM</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <script src="PrayTimes.js"></script>
+		<style>
+    #myProgress {
+      width: 100%;
+      background-color: lightgrey;
+      clear:both;
+    }
+    #myBar {
+      width: 1%;
+      height: 7px;
+      background-color: #00918e;
+    }
+    #main-pic {
+      position: relative;
+      text-align: center;
+      color: white;
+    }
+    #welcome {
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+    }
+    #welcome span {
+      display: block;
+    }
+    #slm-msg {
+      font-size: 60px;
+      letter-spacing: 8px;
+      margin-bottom:10px;
+      position:relative;
+      animation: text 2s 1;
+    }
+    #welc-msg {
+      font-size: 45px;
+    }
+    @keyframes text {
+      0%{
+        color:black;
+        margin-bottom:-70px;
+      }
+      30%{
+        letter-spacing:25px;
+        margin-bottom:-70px;
+      }
+      85%{
+        letter-spacing:8px;
+        margin-bottom:-70px;
+      }
+    }
+    #main-pic img {
+      min-width:100%;
+    }
+		#duration {
+				font-weight:bold;
+				font-size:19px;
+				color: #00918e;
+		}
+    #prayer-reminder {
+      background-color: #ddd;
+      padding:5px 20px 20px 20px;
+      border-radius: 15px;
+      text-align: center;
+    }
+    #prayer-timetable {
+      background-color: #ddd;
+      padding:20px;
+      border-radius: 15px;
+      text-align: center;
+    }
+    #important-dates {
+      background-color: #ddd;
+      padding:20px;
+      border-radius: 15px;
+      text-align: center;
+    }
+    #important-dates table {
+      margin-top: 20px;
+    }
+    #important-dates table, #important-dates th, #important-dates td {
+      border: 1px solid #000;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+
+		</style>
+
+  </head>
+  <body onload="move()">
+
+    <div id="header"> <!-- header div contains IIUM logo, language options, FAQ button, navigation menus, and search-bar -->
+      <div id="logo">
+        <a href="http://www.iium.edu.my/"><img src="images/iium-logo-latest-v2.png"></a>
+      </div>
+      <div id="navmenu">
+      <div id="languageAndFAQ">
+        <a class="active" href="#EN"> EN </a>|
+        <a href="#MY"> MY </a>|
+        <a href="#AR"> AR </a>
+        <a href="FAQ.html"> <i class="far fa-question-circle" title="FAQ"></i> </a>
+      </div>
+      <div id="topnav">
+        <a class="active" href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <span id="musolla-list"><a href="musolla.html">Sisters' Musolla
+          <div class="dropdown-content">
+            <a href="ameenah.html">Musolla Ameenah</a>
+            <a href="asiah.html">Musolla Asiah</a>
+            <a href="asma'.html">Musolla Asma'</a>
+            <a href="hafsah.html">Musolla Hafsah</a>
+            <a href="halimah.html">Musolla Halimatus Sa'diah</a>
+            <a href="maryam.html">Musolla Maryam</a>
+            <a href="nusaibah.html">Musolla Nusaibah</a>
+            <a href="safiyyah.html">Musolla Safiyyah</a>
+            <a href="sumayyah.html">Musolla Sumayyah</a>
+            <a href="salahuddin.html">Musolla Salahuddin</a>
+            <a href="ruqayyah.html">Musolla Ruqayyah</a>
+          </div>
+        </a></span>
+        <a href="activity.html">Activities</a>
+        <a href="contact.html">Contact Us</a>
+        <div class="search-container">
+          <form action="tbc.php" method="get">
+            <button type="submit"><i class="fa fa-search"></i></button>
+              <input type="text" placeholder="search..." name="search">
+          </form>
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div id="test"> <!-- this division starts after the header ends -->
+    <div id="myProgress">
+      <div id="myBar"></div>
+    </div>
+    <div id="main-pic">
+      <img src="images/test.png">
+      <div id="welcome"><span id="slm-msg">ASSALAMU'ALAIKUM</span>
+      <span id="welc-msg">& WELCOME</span></div>
+    </div>
+
+    <div class="main-content"> <!-- the actual content in this division -->
+      <h2>About Musolla in Sisters' Mahallah</h2>
+      <p>Students's residential college of the International Islamic University Malaysia (IIUM)
+        is better known as Mahallah.The word Mahallah refers to a place where it is supposed to
+        be a self-contained not only with services but also activities.  IIUM chooses to name its sisters'
+        Mahallah after the leading female Muhahidah and Syuhada.</p>
+      <p>Currently, IIUM Gombak has 11 sisters' Mahallah that accommodate its students who come from
+        various countries and cultures. Those are Mahallah Ameenah, Mahallah Asiah, Mahallah Asma',
+        Mahallah Hafsah, Mahallah Halimatus Sa'diah, Mahallah Maryam, Mahallah Ruqayyah, Mahallah Sumayyah,
+        Mahallah Nusaibah, Mahallah Salahuddin, and Mahallah Safiyyah. Several sisters' mahallah are provided
+        with its own respective musolla, and several others are sharing the same musolla for two different mahallah.</p>
+      <p>The mahallah who share the same musolla are Asma' with Hafsah, Sumayyah with Nusaibah,
+        and Halimatus Sa'diah with Maryam. They are sharing the same musolla since their distance between
+        each other are really close. Meanwhile, the another 5 mahallah have their own musolla.</p>
+    </div>
+
+    <div class="right-content"> <!-- the right-side content is here -->
+
+      <div id="prayer-reminder">
+        <h4>Next Prayer: </h4>
+				<p>The time now is <span id="current"></span></p>
+				<p><span id="duration"></span></p>
+      </div>
+
+      <div class="space"></div>
+
+      <div id="prayer-timetable">
+      <table>
+        <b id="prayer-date"></b>
+        <tr><td>Imsak</td> <td id="imsak-time"></td></tr>
+        <tr><td>Fajr</td> <td id="fajr-time"></td></tr>
+        <tr><td>Dhuhr</td> <td id="dhuhr-time"></td></tr>
+        <tr><td>Asr</td> <td id="asr-time"></td></tr>
+        <tr><td>Maghrib</td> <td id="maghrib-time"></td></tr>
+				<tr><td>Isha</td> <td id="isha-time"></td></tr>
+      </table>
+      </div>
+
+      <div class="space"></div>
+
+      <div id="important-dates">
+      <table>
+        <b>Important Dates of Islam in 2019/ 1440-1441 H:</b>
+        <tr><th>DATE</th> <th>HIJRI DATE</th> <th>EVENT NAME</th></tr>
+        <tr><td>3 April 2019</td> <td>27 Rejab 1440</td> <td>Israk & Mikraj</td></tr>
+        <tr><td>6 May 2019</td> <td>1 Ramadhan 1440</td> <td>First Day of Ramadhan</td></tr>
+        <tr><td>22 May 2019</td> <td>17 Ramadhan 1440</td> <td>Nuzul al-Quran</td></tr>
+        <tr><td>5 June 2019</td> <td>1 Syawal 1440</td> <td>Eid al-Fitr</td></tr>
+        <tr><td>2 August 2019</td> <td>1 Zulhijjah 1440</td> <td>First Day of Zulhijjah</td></tr>
+        <tr><td>11 August 2019</td> <td>10 Zulhijjah 1440</td> <td>Eid al-Adha</td></tr>
+        <tr><td>1 September 2019</td> <td>1 Muharam 1441</td> <td>Maal Hijrah</td></tr>
+        <tr><td>9 November 2019</td> <td>12 Rabiulawal 1441</td> <td>Maulidur Rasul</td></tr>
+      </table>
+      </div>
+
+      <div class="space"></div>
+
+    </div>
+
+    <footer>
+      CSS Stylist &copy 2019
+    </footer>
+</div>
+
+<script>
+
+// function to move the progress bar when page is load
+function move() {
+  var elem = document.getElementById("myBar");
+  var width = 1;
+  var id = setInterval(frame, 10);
+  function frame() {
+    if (width >= 100) {
+      clearInterval(id);
+    } else {
+      width++;
+      elem.style.width = width + '%';
+    }
+  }
+}
+
+// function to get the value of hour and minute in 24-hour system
+function timeformat(date) {
+  var h = date.getHours();
+	  var m = date.getMinutes();
+	  h = h % 24;
+	  h = h ? h : 24;
+	  m = m < 10 ? '0'+m: m;
+	  var mytime= h + ':' + m;
+	  return mytime;
+}
+
+// function to calculate the time difference between 2 dates, and return a string
+function diff(start, end) {
+  start = start.split(":");
+	end = end.split(":");
+	var startDate = new Date(0, 0, 0, start[0], start[1], 0);
+	var endDate = new Date(0, 0, 0, end[0], end[1], 0);
+	var diff = endDate.getTime() - startDate.getTime();
+	var hours = Math.floor(diff / 1000 / 60 / 60);
+	diff -= hours * 1000 * 60 * 60;
+	var minutes = Math.floor(diff / 1000 / 60);
+  return (hours < 9 ? "0" : "") + hours + " hour(s) " + (minutes < 9 ? "0" : "") + minutes + " minute(s).";
+}
+
+// function to calculate the hour difference between 2 dates, and return the value
+function diffHours(start, end) {
+	start = start.split(":");
+	end = end.split(":");
+	var startDate = new Date(0, 0, 0, start[0], start[1], 0);
+	var endDate = new Date(0, 0, 0, end[0], end[1], 0);
+	var diff = endDate.getTime() - startDate.getTime();
+	var hours = Math.floor(diff / 1000 / 60 / 60);
+	diff -= hours * 1000 * 60 * 60;
+	var minutes = Math.floor(diff / 1000 / 60);
+	return hours
+}
+
+// function to calculate the minute difference between 2 dates, and return the value
+function diffMinutes(start, end) {
+  start = start.split(":");
+  end = end.split(":");
+  var startDate = new Date(0, 0, 0, start[0], start[1], 0);
+  var endDate = new Date(0, 0, 0, end[0], end[1], 0);
+  var diff = endDate.getTime() - startDate.getTime();
+  var hours = Math.floor(diff / 1000 / 60 / 60);
+  diff -= hours * 1000 * 60 * 60;
+  var minutes = Math.floor(diff / 1000 / 60);
+  return minutes
+}
+
+var PT = new PrayTimes('Egypt'); // create a new prayer time using Egypt calculation method
+var date = new Date(); // create a new date at the moment
+var times = PT.getTimes(date, [3.253502, 101.653326],08); // calculate the prayer time using Gombak's location
+var prayTimes = new PrayTimes();
+
+const months = ["Jan", "Feb", "Mar","Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+var s = timeformat(date); // current date
+var f = times.fajr; // today's prayer time for Fajr
+var d = times.dhuhr;
+var a = times.asr;
+var m = times.maghrib;
+var i = times.isha;
+var df = diff(s, f); // difference between today's fajr time and today's current time
+var dd = diff(s, d);
+var da = diff(s, a);
+var dm = diff(s, m);
+var di = diff(s, i);
+var dhf = diffHours(s, f); // difference of the hours between df and s
+var dhd = diffHours(s, d);
+var dha = diffHours(s, a);
+var dhm = diffHours(s, m);
+var dhi = diffHours(s, i);
+
+var hourDurations = [ dhf, dhd, dha, dhm, dhi ]; // create an array for the hour differences between each prayer of today and the current time
+var shortestDuration = -1; // is to determine the closest upcoming prayer at the moment
+
+// two forloops to get the minimum duration in the array hourDurations
+for(var i=0; i<hourDurations.length; i++) {
+  if(hourDurations[i]>-1) {
+    shortestDuration = hourDurations[i];
+    break;
+  }
+}
+for(var i=0; i<hourDurations.length; i++)  {
+  if(shortestDuration > hourDurations[i] && hourDurations[i]>-1) {
+		shortestDuration = hourDurations[i];
+  }
+}
+
+// changing the content of div prayer-reminder
+document.getElementById("current").innerHTML = s;
+if (shortestDuration == dhf) {document.getElementById("duration").innerHTML = "Fajr prayer in " + df;}
+if (shortestDuration == dhd) {document.getElementById("duration").innerHTML = "Dhuhr prayer in " + dd;}
+if (shortestDuration == dha) {document.getElementById("duration").innerHTML = "Asr prayer in " + da;}
+if (shortestDuration == dhm) {document.getElementById("duration").innerHTML = "Maghrib prayer in " + dm;}
+if (shortestDuration == dhi) {document.getElementById("duration").innerHTML = "Isha prayer in " + di;}
+if (shortestDuration <= -1)  {
+  if (dhf == -15){document.getElementById("duration").innerHTML = "Fajr prayer in 9 hour(s) " + diffMinutes(s,f) + " minute(s).";}
+  if (dhf == -16){document.getElementById("duration").innerHTML = "Fajr prayer in 8 hour(s) " + diffMinutes(s,f) + " minute(s).";}
+  if (dhf == -17){document.getElementById("duration").innerHTML = "Fajr prayer in 7 hour(s) " + diffMinutes(s,f) + " minute(s).";}
+  if (dhf == -18){document.getElementById("duration").innerHTML = "Fajr prayer in 6 hour(s) " + diffMinutes(s,f) + " minute(s).";}
+  if (dhf == -19){document.getElementById("duration").innerHTML = "Fajr prayer in 5 hour(s) " + diffMinutes(s,f) + " minute(s).";}
+  if (dhf == -20){document.getElementById("duration").innerHTML = "Fajr prayer in 4 hour(s) " + diffMinutes(s,f) + " minute(s).";}
+  if (dhf == -21){document.getElementById("duration").innerHTML = "Fajr prayer in 3 hour(s) " + diffMinutes(s,f) + " minute(s).";}
+  if (dhf == -22){document.getElementById("duration").innerHTML = "Fajr prayer in 2 hour(s) " + diffMinutes(s,f) + " minute(s).";}
+  if (dhf == -23){document.getElementById("duration").innerHTML = "Fajr prayer in 1 hour " + diffMinutes(s,f) + " minute(s).";}
+  if (dhf == -24){document.getElementById("duration").innerHTML = "Fajr prayer in 0 hour " + diffMinutes(s,f) + " minute(s).";}
+}
+
+// changing the content of div prayer-timetable
+document.getElementById("prayer-date").innerHTML = "Gombak Prayer Times (" + date.getDate() + " " + months[date.getMonth()] + " " + date.getFullYear() +"): ";
+document.getElementById("imsak-time").innerHTML =  times.imsak;
+document.getElementById("fajr-time").innerHTML =  times.fajr;
+document.getElementById("dhuhr-time").innerHTML =  times.dhuhr;
+document.getElementById("asr-time").innerHTML =  times.asr;
+document.getElementById("maghrib-time").innerHTML =  times.maghrib;
+document.getElementById("isha-time").innerHTML =  times.isha;
+
+</script>
+
+</body>
+</html>

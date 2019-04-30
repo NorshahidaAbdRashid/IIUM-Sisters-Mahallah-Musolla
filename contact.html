@@ -1,0 +1,219 @@
+<!-- This file written by Maisyarah Binti Bohari
+Matriks Number : 1814624-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact Us - IIUM SMM</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <style>
+    #feedback-form {
+      background-color: #ddd;
+      padding:30px;
+      border-radius: 15px;
+    }
+    fieldset {
+      padding-left: 30px;
+      font-weight: bold;
+    }
+    span {
+      color: red;
+    }
+    fieldset> input, textarea {
+      font-size: 17px;
+      margin: 5px;
+      border-radius: 5px;
+      width: 300px;
+      padding: 5px;
+    }
+    textarea {
+      height: 200px;
+    }
+    /* For Rating Star */
+    .star{
+          color: goldenrod;
+          font-size: 2.0rem;
+          padding:-5px; /*space out the stars */
+          }
+          .star::before{
+          content: '\2606'; /* star outline */
+          cursor: pointer;
+          }
+          .star.rated::before{
+           /* the style for a selected star */
+           content: '\2605'; /* filled star */
+          }
+          .stars{
+            counter-reset: rateme 0;
+            font-size:20px;
+            font-weight: bolder;
+            color:#00918e;
+          }
+          .star.rated{
+            counter-increment: rateme 1;
+          }
+          .stars::after{
+              content: counter(rateme) '/5';
+          }
+        .btn{
+          padding: 10px;
+          float: right;
+          margin: 10px;
+          width: 100px;
+          background-color: #00918e;
+          color:white;
+        }
+        .btn:hover {
+          cursor: pointer;
+          opacity:0.8;
+        }
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="contact.js"></script>
+  </head>
+  <body>
+
+    <div id="header">
+      <div id="logo">
+        <a href="http://www.iium.edu.my/"><img src="images/iium-logo-latest-v2.png"></a>
+      </div>
+      <div id="navmenu">
+      <div id="languageAndFAQ">
+        <a class="active" href="#EN"> EN </a>|
+        <a href="#MY"> MY </a>|
+        <a href="#AR"> AR </a>
+        <a href="FAQ.html"> <i class="far fa-question-circle"></i> </a>
+      </div>
+      <div id="topnav">
+        <a href="home.html">Home</a>
+        <a href="about.html">About Us</a>
+        <span id="musolla-list"><a href="musolla.html">Sisters' Musolla
+          <div class="dropdown-content">
+            <a href="ameenah.html">Musolla Ameenah</a>
+            <a href="asiah.html">Musolla Asiah</a>
+            <a href="asma'.html">Musolla Asma'</a>
+            <a href="hafsah.html">Musolla Hafsah</a>
+            <a href="halimah.html">Musolla Halimatus Sa'diah</a>
+            <a href="maryam.html">Musolla Maryam</a>
+            <a href="nusaibah.html">Musolla Nusaibah</a>
+            <a href="safiyyah.html">Musolla Safiyyah</a>
+            <a href="sumayyah.html">Musolla Sumayyah</a>
+            <a href="salahuddin.html">Musolla Salahuddin</a>
+            <a href="ruqayyah.html">Musolla Ruqayyah</a>
+          </div>
+        </a></span>
+        <a href="activity.html">Activities</a>
+        <a class="active" href="contact.html">Contact Us</a>
+        <div class="search-container">
+          <form action="tbc.php" method="get">
+            <button type="submit"><i class="fa fa-search"></i></button>
+              <input type="text" placeholder="search..." name="search">
+          </form>
+        </div>
+      </div>
+      <div id="currentflow">
+      <a href="home.html">Home</a>|
+      <a class="active" href="contact.html">Contact Us</a>
+      </div>
+      </div>
+    </div>
+
+    <div id="test2">
+      <div class="main-content">
+        <h2>Thank you for visiting our website!</h2>
+        <p>Kindly fill up and submit the form below to provide your comments, rate, and suggestions for the future improvement of IIUM-SMM website.</p>
+
+      <div class="space"></div>
+
+      <form id="feedback-form" action="tbc.php" method="post" class="ajax">
+      <fieldset>
+      <legend>Feedback form: </legend>
+
+          <div class="space"></div>
+
+          <label>Your name <span class= "asterisk">*</span></label><br>
+      			 <input type="text" name="name" placeholder="Your name">
+
+          <br><br>
+
+          <label>Your email address <span class= "asterisk">*</span></label><br>
+      			 <input type="text" name="email" placeholder="Your email">
+
+          <br><br>
+
+          <label>Subject</label><br>
+         		 <input type="text" name="subject">
+
+          <br><br>
+
+          <label>Messages <span class= "asterisk">*</span></label>
+             <br> <textarea name="message" placeholder="Your message.."></textarea>
+
+          <br><br>
+
+          Rate:
+
+          <div class="stars" data-rating="0">
+      		    <span class="star">&nbsp;</span>
+      		    <span class="star">&nbsp;</span>
+      		    <span class="star">&nbsp;</span>
+      		    <span class="star">&nbsp;</span>
+      		    <span class="star">&nbsp;</span>
+      	  </div>
+
+          <br><br>
+          <input type="submit" value="SUBMIT" class="btn">
+
+      </fieldset>
+      </form>
+
+      <div class="space"></div>
+
+      </div>
+
+      <footer>
+        CSS Stylist &copy 2019
+      </footer>
+
+    </div>
+
+
+<script>
+//initial setup
+document.addEventListener('DOMContentLoaded',function(){
+  let stars = document.querySelectorAll('.star');
+  stars.forEach(function(star){
+    star.addEventListener('click',setRating);
+  });
+
+  let rating = parseInt(document.querySelector('.stars').getAttribute('data-rating'));
+  let target = stars[rating - 1];
+  target.dispatchEvent(new MouseEvent('click'));
+});
+
+function setRating(ev){
+  let span = ev.currentTarget;
+  let stars = document.querySelectorAll('.star');
+  let match = false;
+  let num = 0;
+  stars.forEach(function(star, index){
+    if(match){
+      star.classList.remove('rated');
+    }else{
+      star.classList.add('rated');
+    }
+    //are we currently looking at the span was clicked
+    if(star === span){
+      match = true;
+      num = index + 1;
+    }
+  });
+  document.querySelector('.stars').setAttribute('data-rating',num);
+}
+
+</script>
+</body>
+</html>
