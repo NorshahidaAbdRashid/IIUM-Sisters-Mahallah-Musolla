@@ -20,6 +20,7 @@ Matric	: 1719890 -->
       </div>
       <div id="navmenu">
       <div id="languageAndFAQ">
+        <div id="google_translate_element"></div>
         <a class="active" href="#EN"> EN </a>|
         <a href="#MY"> MY </a>|
         <a href="#AR"> AR </a>
@@ -169,6 +170,13 @@ function showSlides() {
   setTimeout(showSlides, 2000); // Change image every 2 seconds
 }
 </script>
+    <script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="google.js"></script>
 
 </body>
 </html>
