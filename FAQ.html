@@ -19,6 +19,7 @@
       </div>
       <div id="navmenu">
       <div id="languageAndFAQ">
+        <div id="google_translate_element"></div>
         <a class="active" href="#EN"> EN </a>|
         <a href="#MY"> MY </a>|
         <a href="#AR"> AR </a>
@@ -86,9 +87,13 @@
     </div>
 
 
-<script>
-
-
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
 </script>
+
+<script type="text/javascript" src="google.js"></script>
+
 </body>
 </html>
