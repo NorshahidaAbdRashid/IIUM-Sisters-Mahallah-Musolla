@@ -104,6 +104,7 @@
       </div>
       <div id="navmenu">
       <div id="languageAndFAQ">
+	<span id="google_translate_element"></span>
         <a class="active" href="#eng" data-reload> EN </a>|
         <a href="#my" data-reload> MY </a>|
         <a href="#ar" data-reload> AR </a>
@@ -398,6 +399,13 @@ document.getElementById("maghrib-time").innerHTML =  times.maghrib;
 document.getElementById("isha-time").innerHTML =  times.isha;
 //end by here, code of Shahida 1711342
 </script>
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+}
+</script>
+
+<script type="text/javascript" src="google.js"></script>
 
 </body>
 </html>
