@@ -104,9 +104,9 @@
       </div>
       <div id="navmenu">
       <div id="languageAndFAQ">
-        <a class="active" href="#EN"> EN </a>|
-        <a href="#MY"> MY </a>|
-        <a href="#AR"> AR </a>
+        <a class="active" href="#eng" data-reload> EN </a>|
+        <a href="#my" data-reload> MY </a>|
+        <a href="#ar" data-reload> AR </a>
         <a href="FAQ.html"> <i class="far fa-question-circle" title="FAQ"></i> </a>
       </div>
       <div id="topnav">
@@ -150,17 +150,17 @@
     </div>
 
     <div class="main-content"> <!-- the actual content in this division -->
-      <h2>About Musolla in Sisters' Mahallah</h2>
-      <p>Students's residential college of the International Islamic University Malaysia (IIUM)
+      <h2 id="content1">About Musolla in Sisters' Mahallah</h2>
+      <p id="para1">Students's residential college of the International Islamic University Malaysia (IIUM)
         is better known as Mahallah.The word Mahallah refers to a place where it is supposed to
         be a self-contained not only with services but also activities.  IIUM chooses to name its sisters'
         Mahallah after the leading female Muhahidah and Syuhada.</p>
-      <p>Currently, IIUM Gombak has 11 sisters' Mahallah that accommodate its students who come from
+      <p id="para2">Currently, IIUM Gombak has 11 sisters' Mahallah that accommodate its students who come from
         various countries and cultures. Those are Mahallah Ameenah, Mahallah Asiah, Mahallah Asma',
         Mahallah Hafsah, Mahallah Halimatus Sa'diah, Mahallah Maryam, Mahallah Ruqayyah, Mahallah Sumayyah,
         Mahallah Nusaibah, Mahallah Salahuddin, and Mahallah Safiyyah. Several sisters' mahallah are provided
         with its own respective musolla, and several others are sharing the same musolla for two different mahallah.</p>
-      <p>The mahallah who share the same musolla are Asma' with Hafsah, Sumayyah with Nusaibah,
+      <p id="para3">The mahallah who share the same musolla are Asma' with Hafsah, Sumayyah with Nusaibah,
         and Halimatus Sa'diah with Maryam. They are sharing the same musolla since their distance between
         each other are really close. Meanwhile, the another 5 mahallah have their own musolla.</p>
     </div>
@@ -212,6 +212,53 @@
       CSS Stylist &copy 2019
     </footer>
 </div>
+
+<script>
+
+// Create a variable for the array data-reload (by Norshahida - 1711342)
+var dataReload = document.querySelectorAll("[data-reload]");
+// Create different languanges (by Shahida - 1711342)
+var language = {
+  eng: {
+    content1:"About Musolla in Sisters' Mahallah",
+    para1:"Students's residential college of the International Islamic University Malaysia (IIUM) is better known as Mahallah.The word Mahallah refers to a place where it is supposed to be a self-contained not only with services but also activities.  IIUM chooses to name its sisters' Mahallah after the leading female Muhahidah and Syuhada.",
+    para2: "Currently, IIUM Gombak has 11 sisters' Mahallah that accommodate its students who come from various countries and cultures. Those are Mahallah Ameenah, Mahallah Asiah, Mahallah Asma', Mahallah Hafsah, Mahallah Halimatus Sa'diah, Mahallah Maryam, Mahallah Ruqayyah, Mahallah Sumayyah, Mahallah Nusaibah, Mahallah Salahuddin, and Mahallah Safiyyah. Several sisters' mahallah are provided with its own respective musolla, and several others are sharing the same musolla for two different mahallah.",
+    para3: "The mahallah who share the same musolla are Asma' with Hafsah, Sumayyah with Nusaibah, and Halimatus Sa'diah with Maryam. They are sharing the same musolla since their distance between each other are really close. Meanwhile, the another 5 mahallah have their own musolla."
+  },
+  my: {
+    content1:"Tentang Musolla di Mahallah Sister",
+    para1:"Kolej kediaman pelajar Universiti Islam Antarabangsa Malaysia (UIAM) lebih dikenali sebagai Mahallah. Kata Mahallah merujuk kepada tempat di mana ia sepatutnya menjadi mandiri bukan hanya dengan perkhidmatan tetapi juga aktiviti. IIUM memilih untuk menamakan mahallahnya dengan nama para wanita terkemuka dari kalangan Muhahidah dan Syuhada.",
+    para2: "Pada masa ini, IIUM Gombak mempunyai 11 Mahallah sister yang menampung pelajarnya yang berasal dari pelbagai negara dan budaya. Mahallah tersebut ialah Mahallah Ameenah, Mahallah Asiah, Mahallah Asma ', Mahallah Hafsah, Mahallah Halimatus Sa'diah, Mahallah Maryam, Mahallah Ruqayyah, Mahallah Sumayyah, Mahallah Nusaibah, Mahallah Salahuddin, dan Mahallah Safiyyah. Beberapa mahalah sister disediakan dengan musolla masing-masing, dan beberapa yang lain berkongsi musolla yang sama untuk dua mahallah yang berbeza.",
+    para3: "Mahallah yang berkongsi musolla yang sama adalah Asma' dengan Hafsah, Sumayyah dengan Nusaibah, dan Halimatus Sa'diah dengan Maryam. Mereka berkongsi musolla yang sama kerana jarak antara satu sama lain adalah sangat dekat. Sementara itu, 5 mahallah lain mempunyai musola sendiri."
+  },
+  ar: {
+    content1:"عن موسولا في راهبات المحلة",
+    para1:"الكلية السكنية للطلاب في الجامعة الإسلامية الدولية في ماليزيا (IIUM) تعرف باسم المحلة. تشير كلمة المحلة إلى مكان يُفترض فيه أنه مكتفٍ ذاتيًا ليس فقط في الخدمات ولكن أيضًا في الأنشطة. تختار IIUM تسمية شقيقتيها المحلة على اسم الأنثى الرائدة والمحترمة.",
+    para2: "حاليا ، IIUM لديها 11 شقيقة المحلة التي تستوعب طلابها الذين يأتون من مختلف البلدان والثقافات. وهؤلاء هم محلة أمينة ، ومحلة آسيا ، ومحلة أسماء ، ومحلة حفصة ، ومحلة حليمصوص سعدية ، ومحلة مريم ، ومحلة رقاية ، ومحلة سميلة ، ومحلة نسيبة ، ومحلة صلاح الدين ، ومحافظة صفية. يتم توفير العديد من الأخوات المحلة مع الخاصة بها ، وعدة أخريات تقاسم نفس  لاثنين من المحلة مختلفة.",
+    para3: "إن المحلة التي تتقاسم نفس المولى هي أسماء مع حفصة ، والسمية مع نسيبة ، وحليمسات سعدية مع مريم. إنهم يشاركون في نفس  لأن المسافة بين بعضهم البعض قريبة جدًا. وفي الوقت نفسه ، فإن 5 المحلة الأخرى لديهم  الخاصة بهم."
+  }
+}; 
+  if (window.location.hash) {
+    if(window.location.hash === "#my") {
+      content1.textContent = language.my.content1;
+      para1.textContent = language.my.para1;
+      para2.textContent = language.my.para2;
+      para3.textContent = language.my.para3;
+    }
+    if(window.location.hash === "#mymy") {
+      content1.textContent = language.ar.content1;
+      para1.textContent = language.ar.para1;
+      para2.textContent = language.ar.para2;
+      para3.textContent = language.ar.para3;
+    }
+  }
+  for (i=0; i<= dataReload.length; i++) {
+    dataReload[i].onclick = function() {
+        location.hash += "my";
+        location.reload();
+    };
+  }
+</script>
 
 <script>
 
@@ -285,6 +332,7 @@ var date = new Date(); // create a new date at the moment
 var times = PT.getTimes(date, [3.253502, 101.653326],08); // calculate the prayer time using Gombak's location
 var prayTimes = new PrayTimes();
 
+// Create new date and each prayer time for that date (by Shahida - 1711342) 
 const months = ["Jan", "Feb", "Mar","Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 var s = timeformat(date); // current date
 var f = times.fajr; // today's prayer time for Fajr
@@ -303,7 +351,8 @@ var dha = diffHours(s, a);
 var dhm = diffHours(s, m);
 var dhi = diffHours(s, i);
 
-var hourDurations = [ dhf, dhd, dha, dhm, dhi ]; // create an array for the hour differences between each prayer of today and the current time
+// Starts from here, until the end, code by Shahida -1711342
+var hourDurations = [ dhf, dhd, dha, dhm, dhi ]; // create an array for the hour differences between each prayer of today and the current time 
 var shortestDuration = -1; // is to determine the closest upcoming prayer at the moment
 
 // two forloops to get the minimum duration in the array hourDurations
@@ -347,7 +396,7 @@ document.getElementById("dhuhr-time").innerHTML =  times.dhuhr;
 document.getElementById("asr-time").innerHTML =  times.asr;
 document.getElementById("maghrib-time").innerHTML =  times.maghrib;
 document.getElementById("isha-time").innerHTML =  times.isha;
-
+//end by here, code of Shahida 1711342
 </script>
 
 </body>
